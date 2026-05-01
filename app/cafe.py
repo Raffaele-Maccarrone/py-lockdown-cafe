@@ -19,5 +19,8 @@ class Cafe:
                 if visitor["wearing_a_mask"]:
                     return f"Welcome to {self.name}"
                 raise NotWearingMaskError("You have to wear a chin diaper")
-            raise OutdatedVaccineError(f"Vaccine has expired on {visitor['vaccine']['expiration_date']}")
+            raise OutdatedVaccineError(
+                f"Vaccine has expired on "
+                f"{visitor['vaccine']['expiration_date']}"
+            )
         raise NotVaccinatedError("You are not vaccinated")
